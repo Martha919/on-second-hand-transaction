@@ -1,0 +1,38 @@
+<view class='title-card'>
+  <view wx:if="{{isUser}}">
+    <image class='touxiang' src='{{userInfoForSql.userImg}}'></image>
+    <view>
+      <text>{{userInfoForSql.username}}</text>
+    </view>
+  </view>
+  <view wx:else="{{isUser}}">
+   <button class='button' bindtap='logBtn'><text>登录/注册</text></button>  
+  </view>
+</view>
+
+<view class='box'>
+  <view class='box-span' style='flex:1'>
+    <text class='left'>个人信息</text>
+    <view class='right'>
+      <image src='/img/enter.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='box2'>
+  <view class='box-span' style='flex:1'>
+    <text class='left'>交易记录</text>
+    <view class='right'>
+      <text>{{userInfoForSql.goodsNum}}</text>
+      <image src='/img/enter.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='box3'>
+  <text>消息</text>
+</view>
+
+<view class='box4'>
+  <text>设置</text>
+</view>
